@@ -1,13 +1,13 @@
 <script>
-  import Email from '$lib/Email.svelte'
+  import { getFlights } from '$lib/scripts.js'
+  import { Button } from '$lib/components/ui/button/index.js'
 </script>
 
 <section class="content-block !py-[10rem]">
   <h1 class="text-center">
-    <span class="gradient-text block">Incredible websites</span> for small businesses.
+    Flight
+    <span class="gradient-text">Tracking</span>
   </h1>
-  <p class="text-center">
-    I make budget-friendly websites for small to medium-sized businesses.
-  </p>
-  <Email btn text="Get a website" />
+  <p class="text-center">Track flights all over the world.</p>
+  <Button on:click={getFlights} class="btn">Find Flights</Button>
 </section>
